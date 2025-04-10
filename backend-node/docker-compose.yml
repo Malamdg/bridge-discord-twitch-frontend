@@ -1,1 +1,15 @@
-name: jessy
+#name: jessy
+
+version: "3.9"
+
+services:
+  backend-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-node
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    command: npm start

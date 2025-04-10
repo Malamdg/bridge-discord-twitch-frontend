@@ -1,12 +1,10 @@
-name: james
+version: "3.9"
 
 services:
-  web:
+  frontend-angular:
     build:
-      context: angular
-      target: builder
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-angular
     ports:
-      - "4200:4200"
-    volumes:
-      - ./angular:/project
-      - /project/node_modules
+      - "80:80"
