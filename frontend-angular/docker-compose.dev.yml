@@ -1,0 +1,14 @@
+services:
+  frontend-angular:
+    build:
+      context: .
+      target: dev
+    container_name: frontend-angular
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+    command: npm start
