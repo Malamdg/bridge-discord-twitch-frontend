@@ -1,0 +1,29 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+//{
+//	"name": "Untitled Node.js project",
+//	"build": {
+//		"dockerfile": "Dockerfile"
+//	},
+//  "remoteUser": "node",
+//  "customizations" : {
+//    "jetbrains" : {
+//      "backend" : "WebStorm"
+//    }
+//  }
+//}
+
+
+{
+  "name": "backend-node-dev",
+  "dockerComposeFile": [
+    "../docker-compose.dev.yml"
+  ],
+  "service": "backend-node",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "jetbrains": {
+      "projector": true,
+      "backend": "WebStorm"
+    }
+  }
+}
