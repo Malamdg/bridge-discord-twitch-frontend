@@ -3,6 +3,7 @@ services:
     build:
       context: .
       target: dev
+    container_name: backend-node-dev
     ports:
       - "3000:3000"
     volumes:

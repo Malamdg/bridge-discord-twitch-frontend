@@ -1,26 +1,26 @@
 {
-    "name": "Node.js Backend",
+    "name": "Angular Frontend",
     "dockerComposeFile": [
         "../docker-compose.yml",
         "../docker-compose.dev.yml"
     ],
-    "service": "backend",
+    "service": "frontend",
     
     "customizations": {
         "vscode": {
             "extensions": [
-                "dbaeumer.vscode-eslint",
+                "angular.ng-template",
                 "esbenp.prettier-vscode",
-                "christian-kohler.npm-intellisense",
-                "christian-kohler.path-intellisense",
-                "mikestead.dotenv"
+                "dbaeumer.vscode-eslint",
+                "ms-vscode.vscode-typescript-tslint-plugin",
+                "formulahendry.auto-close-tag"
             ]
         }
     },
 
-    "forwardPorts": [3000],
-    
-    "remoteUser": "node",
+    "forwardPorts": [4200],
+
+    "remoteUser": "angular",
 
     "features": {
         "ghcr.io/devcontainers/features/git:1": {}

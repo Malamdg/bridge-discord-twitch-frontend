@@ -1,0 +1,16 @@
+{
+  "name": "frontend-dev",
+  "dockerComposeFile": [
+    "../docker-compose.dev.yml"
+  ],
+  service: "frontend-dev",
+  runServices: [
+    "frontend-angular-dev",
+    "backend-node-dev"
+  ],
+  "customizations": {
+    "jetbrains": {
+      "backend": "WebStorm"
+    }
+  }
+}
